@@ -2,10 +2,11 @@
 	$summer.fixStatusBar($summer.byId('header'));
 	bindEvents()
 }
+i=0;
 function bindEvents() {
 	var mySwiper = new Swiper('.swiper-container', {
 		loop : false,
-		//onlyExternal : true,
+		onlyExternal : true,
 		//touchAngle : 10,
 		onInit : function(swiper) {
 			var H = $(".um-content").height();
@@ -26,13 +27,14 @@ function bindEvents() {
 			"url" : 'html/view.html'
 		});
 	});
-	/*var iScroller = new iScroll("list", {
-		onRefresh : function() {		
-		},
+	
+	var iScroller = new iScroll("list1", {
+		vScrollbar: true,		
 		onScrollMove : function() {
+			console.log(i++)
 		},
 		onScrollEnd : function() {
-			$('.list1').append(
+			$('.scroller1').append(
 				'<li>'+
 				'<div class="um-label um-box-justify">'+
 				'<div>qqq</div>'+
@@ -40,6 +42,13 @@ function bindEvents() {
 				'<span class="um-green mr15">已通过</span><i class="ti-angle-right"></i>'+
 				'</div>'+
 				'</div>'+
-				'</li>')}	
-	})*/
+				'</li>')
+			this.refresh();			
+		}
+						
+	})
+	var H = $summer.winHeight() - $(".um-header").height();
+	$("#list1").height(H);
+	iScroller.refresh();
+	
 }

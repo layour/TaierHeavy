@@ -1,14 +1,8 @@
-/*
- * Summer UI JavaScript Library
- * Copyright (c) 2016 yonyou.com
- * Author: gct@yonyou.com
- * Version: 3.0.0.20160805
- */ 
 ( typeof require == "function") && require.config({
 	baseUrl : 'js',
 	paths : {
 		jquery : "jquery-2.1.4.min",
-		UM : "Frameworks/iuapmobile.frameworks.core"
+		UM : "Frameworks/iuapmobile.frameworks.core-2.7.0"
 	}
 }); ( function(global, factory) {
 		if ( typeof module === "object" && typeof module.exports === "object") {
@@ -46,7 +40,11 @@
 			this._moveY = 0; //手指在列表上滑动的纵向位移		
 			this._offsetY = 0; //手指在列表上滑动的纵向距离
 			this._longTapEvent = null; //手指在列表上的长按定时器
-	
+			
+			//
+			this.pulldownTime = null;
+			this.pullUpTime = null;
+			
 			this.init(options);
 		};
 
@@ -99,6 +97,7 @@
 					// 加载上方
 					if (self.config.pullDownEnable && self._scrollTop <= 0 && self._pullDirection == 'down') {
 						e.preventDefault();
+						clearTimeout(this.pulldownTime);
 						if (!self.config.insertDOM) {
 							self.$element.prepend('<div class="' + self.opts.domUp.domClass + '"></div>');
 							self.config.insertDOM = true;
@@ -128,6 +127,7 @@
 					// 加载下方
 					if (self.config.pullUpEnable && self._contentHeight <= (self._viewHeight + self._scrollTop) && self._pullDirection == 'up') {
 						e.preventDefault();
+						clearTimeout(this.pullUpTime);
 						if (!self.config.insertDOM) {
 							self.$element.append('<div class="' + self.opts.domDown.domClass + '"></div>');
 							self.config.insertDOM = true;
@@ -215,7 +215,7 @@
 							})
 						}
 						this.isPulling = true;
-						setTimeout(function() {
+						this.pulldownTime = setTimeout(function() {
 							self._events.trigger("pullDown", self, {});
 						}, 1000);
 					} else if (self.config.pullUpEnable && self._pullDirection == 'up') {
@@ -225,7 +225,7 @@
 							})
 						}
 						this.isPulling = true;
-						setTimeout(function() {
+						this.pullUpTime = setTimeout(function() {
 							self._events.trigger("pullUp", self, {});
 						}, 1000);
 					}
