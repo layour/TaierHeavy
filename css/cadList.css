@@ -1,0 +1,67 @@
+.cad-rowBox:active{
+	background-color:#CCC;
+}
+.cad-row .rowBox{
+	height:44px;
+	width:100%;
+}
+
+/* 第一行 */
+.row-leftArea .cad-title {
+	width:70%;
+	height:18px;
+	padding-left: 10px;
+	font-size:16px;
+	float:left;
+	color:#000012;
+}
+
+.row-leftArea .cad-updateP{
+	width:30%;
+	float:left;
+    padding-top: 2px;
+    margin-top: 1px;
+}
+.row-leftArea .updatePersion-name{
+	
+	float:left;
+	font-size:12px;
+}
+.cad-updatePerson {
+	float: left;
+	font-size:12px;
+}
+
+/* 第二行 */
+
+.row-rightArea .cad-codeBox{
+	width: 60%;
+	float: left;
+	font-size:12px;
+	padding: 4px 1px 1px 10px;
+}
+
+.row-rightArea .cad-codeBox .cad-code{
+	float:left;
+}
+.row-rightArea .cad-codeBox .cad-codeNum{
+	float:left;
+}
+.row-rightArea .cad-updateTime{
+    font-size: 12px;
+    width: 40%;
+    color: red;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.cad-row .sepLine{
+	width:99%;
+	height:1px;
+	float:left;
+	background-color:#9E9E9E;
+	margin-left: 7px;
+}
+ 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <application> 
-  <app_start>index.html</app_start>  
+  <app_start>html/cadList.html</app_start>  
   <app_name>TaierHeavy</app_name>  
   <project_name>TaierHeavy</project_name>  
   <package_name>com.poc.taierheavy</package_name>  
@@ -12,7 +12,7 @@
   <versionCode>1</versionCode>  
   <versionBuild>1</versionBuild>  
   <versionName>1</versionName>  
-  <orientation>unspecified</orientation>  
+  <orientation>portrait</orientation>  
   <min_sdk_version>10</min_sdk_version>  
   <max_sdk_version>17</max_sdk_version>  
   <permission id="android.permission.INTERNET"></permission>  
@@ -23,8 +23,8 @@
   <import id="cordova-plugin-camera" type="web" ref="cordova"/>  
   <import id="cordova-plugin-file" type="web" ref="cordova"/>  
   <import id="cordova-plugin-whitelist" type="web" ref="cordova"/>  
-  <fullScreen>true</fullScreen>
-  <statusBarStyle>light</statusBarStyle>
+  <fullScreen>true</fullScreen>  
+  <statusBarStyle>light</statusBarStyle> 
 </application>
 <!--
 【屏幕显示方向】

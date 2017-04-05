@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<link rel="stylesheet" href="../css/cadList.css">	
+		<script src="../js/Frameworks/iuapmobile.frameworks.core.js" ></script>
+		<script src="../js/summer.js" ></script>		
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../js/knockout-2.2.0.js"></script>
+		<script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			
+            <div class="um-header" >
+            	<a href="#"  class="um-back">返回</a>
+            	<h3>CAD图表</h3>
+            </div>
+
+			<div class="um-content" id="frame_content">
+				<img src="../img/cadBg.png" width="120%" height="160px"/>
+			
+				<div class="um-sortlist" id="cadList">
+                    <ul class="um-list" id="sortList" data-bind="foreach:data">
+                        <li class="um-listview-row cad-rowBox">
+                            <a href="#" class="cad-row">
+                              <div class="rowBox">
+	                               <div class="row-leftArea">
+		                               <div class="cad-title" data-bind="text:cadName"> 
+		                               		配电柜设计图
+		                               </div>
+		                                <div class="cad-updateP">
+		                                	<div class="cad-updatePerson">
+		                               			更新人:
+		                               		</div>
+		                               		<div class="updatePersion-name" data-bind="text:updatePName">程成诚</div>
+		                                </div>
+	                               </div>
+	                               <div class="row-rightArea">
+	                               	   <div class="cad-codeBox">
+	                               	   	<div class="cad-code"> 
+		                               		图纸编号:
+		                               </div>
+		                               <div class="cad-codeNum" data-bind="text:cadCode">
+		                               		CXA10011966
+		                               </div>
+	                               	   </div>
+		                               <div class="cad-updateTime" data-bind="text:updateTime">
+		                               		17/12/22 12:22:33
+		                               </div>
+	                               </div>
+	                                <div class="sepLine"></div>
+                              </div>
+                            </a>
+                        </li>
+                     
+                    </ul>
+
+				</div>
+			</div>
+
+		</div>
+		<script src="../js/cadList.js"></script>
+	</body>
+</html>

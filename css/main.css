@@ -1,0 +1,161 @@
+
+a.list-row{
+	display:block;
+	/* a是行内元素, 行内元素包不住块级元素, 可以修改为block级元素,即可*/
+}
+
+/* 任何元素都有激活属性, 就是控件被按下之后的状态 */
+a.list-row:active{
+	background:lightgray;
+}
+.map{
+	width: 100%;
+	/* height:286px; */
+	height:330px;
+}
+
+.checkPosition{
+	width:100%;
+	height:65px;
+	/* background-color:red; */
+}
+
+.checkPosition .lfCheckPosition, .rtCheckPosition{
+ 	width:50%;
+ 	height:65px;
+ }
+
+/*左侧定位*/
+.checkPosition .lfCheckPosition{
+	float:left;
+	border-right: 1px solid #795548;
+}
+
+/*分割线*/
+/* .checkPosition .vtlLine{
+	width:1px;
+	height:65px;
+	background-color:blue;
+	float:left;
+	margin-left: 3px
+} */
+
+/*右侧定位*/
+.checkPosition .rtCheckPosition {
+	float:right;
+	background-color:red;
+}
+
+.checkPosition .lfCheckPosition .startPosi, .rtCheckPosition .endPosi{
+	height:30px;
+	background-color:#FFFFDE;
+}
+
+.checkPosition .lfCheckPosition .stMechineName, .rtCheckPosition .endMechineName{
+	height:35px;
+	background-color:#CCCE9E;
+}
+
+p{
+	padding-top: 4px;
+}
+
+.checkHistory .checkTitle{
+	width:100%;
+	height:30px;
+	background-color:#FFFFDE;
+}
+
+.checkHistory .checkSubTitle{
+	width:100%;
+	
+	float: left;
+	background-color:red;
+}
+
+/* 列表 */
+.row-headding{
+	text-align: left;
+	margin-left:6px;
+	font-size:15px;
+	color:#000012;
+}
+
+.list-row .row-left{
+	height:44px;
+	width:85%;
+	float: left;
+}
+
+.list-row .row-left .row-detail p{
+	/* font-size:8px; */
+	float: left;
+}
+.list-row .row-left .row-detail .checkDepTitle{
+	width:53px;
+	margin:-11px 4px 0 4px;
+	text-align: center;
+}
+.list-row .row-left .row-detail .checkDep{
+	width:84px;
+	margin:-11px 4px 0 -10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	overflow: hidden;
+}
+.list-row .row-left .row-detail .checkTimeTitle{
+	width:51px;
+	margin:-11px 4px 0 -6px;
+}
+.list-row .row-left .row-detail .checkTime{
+	width:114px;
+	margin:-22px 4px 0 183px;
+	text-align:left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.row-detail{
+	width:200px;
+	height:30px;
+	float:left;
+	font-size:10px;
+}
+
+.list-row .row-right{
+	width:15%;
+	height: 44px;
+	float:left;
+	padding-top:8px;
+}
+
+/* 是否完成 */
+.list-row .row-right .modifResult {
+	width:46px;
+	height:24px;
+	margin-right:3px;
+}
+.list-row .sepLine{
+	width:96%;
+	height:1px;
+	margin-left:15px;
+	background-color:gray;
+}
+.um-switch1 {
+	margin-top: -9px;
+	z-index: 333;
+}
+.um-switch1 .um-track {
+	width:44px;
+	height:23px;
+	
+}  
+.um-switch1 .um-handle {
+  	width: 19px;
+    height: 19px;
+    border-radius: 27px;
+    top: 2px;
+    left: 1px;
+    background-color: #fff;
+}
+
+

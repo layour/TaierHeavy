@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/main.css">
+		<!-- <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/> -->
+		<link rel="stylesheet" href="../css/webMap.css">
+		<script src="../js/summer.js" ></script>
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="http://webapi.amap.com/maps?v=1.3&key=50e101f51959ef363593cb572ea813a5"></script>
+		<script type="text/javascript" src="../js/knockout-2.2.0.js"></script>
+		<script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		
+		<script src="../js/main.js" ></script>
+		
+		
+	</head>
+	<body>
+		<div class="um-win" id="main">
+
+			<div class="um-header" >
+				<a href="#"  class="um-back" id="backBtn">返回</a>
+				<h3>点  检</h3>
+				<a class="um-header-right" href="#" id="completedBtn">完成</a>
+			</div>
+
+			<div id="content" class="um-content">
+				
+					<!--Map-->
+					<div class="map">
+						 <div id="container" style="height:330px"></div>
+					</div>
+
+					<!--check Position-->
+					<div class="checkPosition tc">
+						<div class="lfCheckPosition">
+							<div class="startPosi">
+								<p>点检起始位置</p>
+							</div>	
+							<div class="stMechineName">
+								<p>A机床</p>
+							</div>
+						</div>
+						<!-- 分割线
+						<div class="vtlLine tc"></div> -->
+						<div class="rtCheckPosition">
+							<div class="endPosi">
+								<p>点检结束位置</p>
+							</div>
+							<div class="endMechineName">
+								<p>C机床</p>
+							</div>		
+						</div>
+					</div>
+					
+					<!--check History-->
+					<div class="checkHistory tc">
+						<div class="checkTitle">
+							<p>点检记录</p>
+						</div>
+						<div class="checkHistoryList" id="sortList">
+                            <ul class="um-list" data-bind="foreach:data">
+                                <li>
+                                    <a href="#" class="list-row">
+                                    	<div class="row-left">
+                                    		<h4 class="row-headding" data-bind="text:mechineName">发电机A</h4>
+	                                    	<div class="row-detail">
+	                                    		<p class="checkDepTitle">点检部门:</p> <p class="checkDep" data-bind="text:checkDep">机电维修部</p>
+	                                    		<p class="checkTimeTitle">点检时间:</p> <p class="checkTime" data-bind="text:completeTime"></p>
+	                                    	</div>
+                                    	</div>
+                                    	<div class="row-right">
+                                    		<label class="um-switch1">
+	                                          	<input type="checkbox" value="on" data-bind="text:switchState">
+	                                          	<div class="um-track">
+	                                          		<div class="um-handle">
+	                                          		</div>
+	                                          	</div>
+	                                         </label>
+                                    	</div>
+                                    	<div class="sepLine cl"></div>
+                                    </a>
+                                </li>                                                    
+                            </ul>
+						</div>
+						
+					</div>	
+			</div>
+		</div>
+		
+	</body>
+</html>
